@@ -1,0 +1,6 @@
+2024-09-08 18:14:24.565860+03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table if not exists photos ( id bigint [*]identity primary key, file_name varchar(255), content_type varchar(255), data binary )"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, DEFAULT, GENERATED, ON UPDATE, NOT NULL, DEFAULT ON NULL, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+create table if not exists photos ( id bigint identity primary key, file_name varchar(255), content_type varchar(255), data binary ) [42001-224]
+2024-09-08 18:44:35.502949+03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DATA BINARY": "CAST(X'ffd8ffe116c645786966000049492a00080000000f000001030001000000d015000001010... (12963243)"; SQL statement:
+INSERT INTO "PHOTOS" ("CONTENT_TYPE", "DATA", "FILE_NAME") VALUES (?, ?, ?) [22001-224]
